@@ -20,5 +20,21 @@ public class cannon{
    }
    
    void move(){
+     if(key == CODED){ 
+       if(keyCode == LEFT){
+         if (x - 50 <= 300) {
+           x -= 10;
+         }
+       }
+       if(keyCode == RIGHT){
+         if(x + 50 <= 1300) { 
+           x += 10;
+         }
+       }
+     }
+   }
+   
+   void shoot(){
+     
    }
 }
