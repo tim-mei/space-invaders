@@ -13,10 +13,10 @@ public class cannon {
 
   void display() {
     fill(c);
-    rect(750, 700, 100, 40);
-    rect(725, 675, 80, 10);
-    rect(775, 630, 20, 20);
-    rect(790, 620, 5, 5);
+    rect(750, 700, 150, 40);
+    rect(765, 685, 120, 15);
+    rect(805, 665, 38, 20);
+    rect(820, 655, 10, 10);
   }
 
   void move() {
