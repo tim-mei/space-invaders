@@ -1,5 +1,4 @@
 public class cannon {
-
   float x, y; 
   int numOfLives; 
   color c; 
@@ -41,7 +40,4 @@ public class cannon {
       }
     }
   }
-  
-  
-  
 }
