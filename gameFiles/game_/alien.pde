@@ -30,6 +30,8 @@ public class alien {
   }
   
   void die(){
+    alive = false; 
+    
   }
   
 }
@@ -46,5 +48,10 @@ public class shooterAlien extends alien {
   }
   
   void shoot() {
+    float rGen = (float)Math.random();
+    if(rGen > 0.8){
+      //shoots a bullet if the alien is also the first in the column
+      //new program to check if the alien is first? 
+    }
   }
 }

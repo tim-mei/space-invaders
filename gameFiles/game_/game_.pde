@@ -1,7 +1,7 @@
-//list of bullets
-//list of aliens
-//player (Cannon) 
-//score 
+bullet shots[]; 
+alien invaders[];
+cannon player;
+int currScore;
 
 
 void setup(){ 
@@ -11,9 +11,10 @@ void setup(){
   test.display();
   stroke(#FFFFFF);
   line(200, 600, 1400, 600);
-  cannon player = new cannon();
+  player = new cannon();
   player.display();
 }
 
 void draw(){
+  //all aliens in the list should be able to move here 
 }
