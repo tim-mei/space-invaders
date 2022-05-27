@@ -2,11 +2,13 @@ public class cannon {
   float x, y; 
   int numOfLives; 
   color c; 
+  int dx;
 
   public cannon() { 
     x = 800; 
     y = 750; 
     numOfLives = 3; 
+    dx = 10;
     c = color(#5FA792);
   }
 
@@ -19,19 +21,15 @@ public class cannon {
   }
 
   void move() {
-    if (key == CODED) { 
-      if (keyCode == LEFT) {
-        if (x - 50 <= 300) {
-          x -= 10;
-        }
-      }
-      if (keyCode == RIGHT) {
-        if (x + 50 <= 1300) { 
-          x += 10;
-        }
-      }
+    x += dx;
+    if(this.x - 100 <= 400){
+      x = 400;
+    }
+    else if (this.x + 100 == 1200){
+      x = 1200;
     }
   }
+  
 
   void shoot() {
     if (keyPressed) {
