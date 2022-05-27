@@ -31,9 +31,12 @@ public class alien {
   void move() {
     while(alive){ 
       //should gradually move down 
-      xPos += dx; 
-      yPos += dy;
-      xPos -= dx;
+      if(this.xPos == 200){
+        xPos += dx;
+      }
+      else if(this.xPos == 1400){
+        xPos -= dx;
+      }
     }
   }
   
@@ -62,4 +65,9 @@ public class shooterAlien extends alien {
       //new program to check if the alien is first? 
     }
   }
+  
+  void move(){
+    super.move();
+  }
+  
 }

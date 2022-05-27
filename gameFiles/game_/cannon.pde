@@ -13,6 +13,7 @@ public class cannon {
   }
 
   void display() {
+    stroke(c);
     fill(c);
     rect(750, 700, 150, 40);
     rect(765, 685, 120, 15);
@@ -22,11 +23,11 @@ public class cannon {
 
   void move() {
     x += dx;
-    if(this.x - 100 <= 400){
-      x = 400;
+    if(this.x - 100 <= 200){
+      x = 200;
     }
-    else if (this.x + 100 == 1200){
-      x = 1200;
+    else if (this.x + 100 == 1400){
+      x = 1400;
     }
   }
   
