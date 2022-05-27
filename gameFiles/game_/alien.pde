@@ -17,7 +17,15 @@ public class alien {
   }
   
   void display(){
-    rect(100, 100, 100 ,100);
+    stroke(255);
+    rect(100, 100, 20 , 10);
+    rect(90, 110, 40, 10);
+    rect(80, 120, 60, 10);
+    rect(70, 130, 17, 10);
+    rect(100, 130, 17, 10);
+    rect(130, 130, 17, 10);
+    rect(70, 140, 77 , 10);
+    
   }
 
   void move() {
