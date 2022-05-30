@@ -1,36 +1,56 @@
-bullet shots[]; 
 ArrayList invaders = new ArrayList();
-ArrayList projectiles = new ArrayList();
+ArrayList bullets = new ArrayList();
+boolean pressLeft = false;
+boolean pressRight = false;
+
 cannon player;
 int currScore;
-
-
 
 void setup() { 
   size(1600, 900);
   background(0);
-  alien test = new alien(100, 100, 100, 20, 10);
-  test.display();
+
   stroke(#FFFFFF);
-  line(0, 600, width, 600);
+  line(200, 600, 1400, 600);
   player = new cannon();
   player.display();
 }
 
 void draw() {
+  
   //all aliens in the list should be able to move here
+  player.display();
+  move();
+  
+}
+
+
+
+//movement for the player
+
+void move() {
+  if (pressLeft) {
+    player.x -=10;
+  }
+  if (pressRight) {
+    player.x +=10;
+  }
 }
 
 void keyPressed() {
-  if (keyCode == LEFT) {
+  if (key == 'a') {
+    pressLeft = true;
   }
-  if (keyCode == RIGHT) {
+  if (key == 'd') {
+    pressRight = true;
   }
 }
 
 void keyReleased() {
-  if (keyCode == LEFT) {
+  if (key == 'a') {
+    pressLeft = false;
+  } 
+  if (key == 'd') {
+    pressRight = false;
   }
-  if (keyCode == RIGHT) {
-  }
-}
+}  
