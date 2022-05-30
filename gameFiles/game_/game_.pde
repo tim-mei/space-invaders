@@ -23,6 +23,7 @@ void draw() {
   move();
   player.position();
   line(0, 800, width, 800);
+  invaders.mobilize();
 }
 
 
