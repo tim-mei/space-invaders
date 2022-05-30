@@ -1,17 +1,21 @@
 public class cannon {
   float x, y; 
+  boolean alive;
   int numOfLives; 
   color c; 
   int dx;
+  
 
   public cannon() { 
-    x = 800; 
+    x = width/2; 
     y = 750; 
+    alive = true;
     numOfLives = 3; 
     dx = 10;
     c = color(#5FA792);
   }
-
+  
+  //scale this down
   void display() {
     stroke(c);
     fill(c);
@@ -22,21 +26,20 @@ public class cannon {
   }
 
   void move() {
-    x += dx;
-    if(this.x - 100 <= 200){
-      x = 200;
-    }
-    else if (this.x + 100 == 1400){
-      x = 1400;
-    }
+    this.x += dx;
+     
+     //checks the positioning 
+     if(this.x < 0){
+       x = 0;
+     }
+     if(this.x > width){
+      x = width;
+     }
   }
   
 
   void shoot() {
-    if (keyPressed) {
-      if (key == ' ') {
-        //create a new bullet
-      }
-    }
+    //return new bullet(this.x, this.y);
   }
+  
 }
