@@ -13,15 +13,15 @@ public class alien {
   public alien(float x, float y, int points) {
     xPos = x;
     yPos = y;
-    dx = 2;
-    howWide = 50;
+    dx = 3;
+    howWide = 25;
     pointsWorth = points;
     alive = true;
   }
 
   void display() {
     fill(255);
-    rect(this.xPos, this.yPos, 50, 50, 28);
+    rect(this.xPos, this.yPos, 25, 25, 28);
   }
 
   void invade() {
