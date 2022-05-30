@@ -1,16 +1,20 @@
+final static float speedMod = 1.1;
+
 public class alien {
   float xPos, yPos;
   float dx;
   boolean alive;
   int pointsWorth;
+  int howWide;
 
   public alien() {
   }
 
-  public alien(float x, float y, float dx_, int points) {
+  public alien(float x, float y, int points) {
     xPos = x;
     yPos = y;
-    dx = dx_;
+    dx = 2;
+    howWide = 50;
     pointsWorth = points;
     alive = true;
   }
@@ -22,8 +26,18 @@ public class alien {
 
   void invade() {
     //forward direction
-    xPos += 2;
+    xPos += dx;
+    if(xPos <=0){
+      xPos = 0;
+      dx *= -1;
+      yPos += 40;
+    }
     //backward direction
+    if(xPos + howWide >= width - 10){
+      xPos = width - (howWide + 10);
+      dx *= -1 * speedMod;
+      yPos += 40;
+    }
   }
 
   void die() {

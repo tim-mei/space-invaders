@@ -9,7 +9,7 @@ int currScore;
 void setup() { 
   size(1600, 900);
   background(0);
-  alien test = new alien(100, 100, 10, 10);
+  alien test = new alien(100, 100, 10);
   test.display();
   invaders.add(test);
   stroke(#FFFFFF);
