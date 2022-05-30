@@ -1,41 +1,29 @@
 public class alien {
   float xPos, yPos;
-  float dx, dy;
+  float dx;
   boolean alive;
   int pointsWorth;
 
   public alien() {
   }
 
-  public alien(float x, float y, float dx_, float dy_, int points) {
+  public alien(float x, float y, float dx_, int points) {
     xPos = x;
     yPos = y;
     dx = dx_;
-    dy = dy_;
     pointsWorth = points;
     alive = true;
   }
 
   void display() {
-    stroke(255);
-    rect(100, 100, 20, 10);
-    rect(90, 110, 40, 10);
-    rect(80, 120, 60, 10);
-    rect(70, 130, 17, 10);
-    rect(100, 130, 17, 10);
-    rect(130, 130, 17, 10);
-    rect(70, 140, 77, 10);
+    fill(255);
+    rect(this.xPos, this.yPos, 50, 50, 28);
   }
 
-  void move() {
-    while (alive) { 
-      //should gradually move down 
-      if (this.xPos == 200) {
-        xPos += dx;
-      } else if (this.xPos == 1400) {
-        xPos -= dx;
-      }
-    }
+  void invade() {
+    //forward direction
+    xPos += 2;
+    //backward direction
   }
 
   void die() {
@@ -61,7 +49,7 @@ public class shooterAlien extends alien {
     }
   }
 
-  void move() {
-    super.move();
+  void invade() {
+    super.invade();
   }
 }

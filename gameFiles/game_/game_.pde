@@ -9,7 +9,9 @@ int currScore;
 void setup() { 
   size(1600, 900);
   background(0);
-
+  alien test = new alien(100, 100, 10, 10);
+  test.display();
+  invaders.add(test);
   stroke(#FFFFFF);
   player = new cannon();
   player.display();
@@ -22,7 +24,11 @@ void draw() {
   move();
   player.position();
   line(0, 800, width, 800);
-  
+  for (int x=0; x<invaders.size(); x++) {
+    alien invader = (alien) invaders.get(x);
+    invader.invade();
+    invader.display();
+  }
 }
 
 
@@ -39,19 +45,19 @@ void move() {
 }
 
 void keyPressed() {
-  if (key == 'a') {
+  if (keyCode == LEFT) {
     pressLeft = true;
   }
-  if (key == 'd') {
+  if (keyCode == RIGHT) {
     pressRight = true;
   }
 }
 
 void keyReleased() {
-  if (key == 'a') {
+  if (keyCode == LEFT) {
     pressLeft = false;
   } 
-  if (key == 'd') {
+  if (keyCode == RIGHT) {
     pressRight = false;
   }
 }  
