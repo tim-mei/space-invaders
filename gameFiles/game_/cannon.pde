@@ -3,7 +3,8 @@ public class cannon {
   boolean alive;
   int numOfLives; 
   color c; 
-  
+  int howWide = 120;
+
   //boolean goLeft = false;
   //boolean goRight = false;
 
@@ -19,25 +20,20 @@ public class cannon {
   void display() {
     stroke(c);
     fill(c);
-    rect(this.x, this.y, 120, 15);
+    rect(this.x, this.y, howWide, 15);
   }
 
-/*
-  void move(int factor){
-    x += factor * 2;
-  }
-
-  void position(){
-    if(x < 0){
+  void position() {
+    if (x < 0) {
       x = 0;
     }
-    if(x > width){
-      x = width;
+    if (x + howWide > width) {
+      x = width - howWide;
     }
   }
-  
- */
- 
+
+
+
   void shoot() {
     //return new bullet(this.x, this.y);
   }

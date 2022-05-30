@@ -11,16 +11,17 @@ void setup() {
   background(0);
 
   stroke(#FFFFFF);
-  line(200, 600, 1400, 600);
   player = new cannon();
   player.display();
 }
 
 void draw() {
-  
+  background(0);
   //all aliens in the list should be able to move here
   player.display();
   move();
+  player.position();
+  line(0, 800, width, 800);
   
 }
 
