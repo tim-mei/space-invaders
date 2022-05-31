@@ -15,6 +15,7 @@ void setup() {
   player = new cannon();
   player.display();
   numOFLives = 3;
+  currScore = 0;
 }
 
 void draw() {
@@ -30,6 +31,11 @@ void draw() {
     shot.display();
     shot.move();
   }
+  textSize(36);
+  fill(255);
+  text("Score: " + currScore, 50, 50);
+  text("Lives: " + numOFLives, 50, 850);
+  
 }
 
 
