@@ -20,4 +20,4 @@ Use the left and right arrow keys to pilot the cannon. Press 'spacebar' to shoot
 
 5/27 - experimented with alien movement and cannon movement
 
-5/30 - *lots of work* got cannon movement functioning, alien movement functioning, alien shooting functioning, and cannon shooting functioning
+5/30 - *(lots of work)* got cannon movement functioning, alien movement functioning, alien shooting functioning, and cannon shooting functioning
