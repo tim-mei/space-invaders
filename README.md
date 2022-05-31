@@ -13,7 +13,11 @@ Use the left and right arrow keys to pilot the cannon. Press 'spacebar' to shoot
 *Log*
 
 5/24 - creating the skeleton for the cannon file
+
 5/25 - updated cannon's display method; tested the cannon in setup
+
 5/26 - modified setup in the main file and wrote part of the skeleton for alien
+
 5/27 - experimented with alien movement and cannon movement
+
 5/30 - *lots of work* got cannon movement functioning, alien movement functioning, alien shooting functioning, and cannon shooting functioning
