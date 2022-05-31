@@ -1,6 +1,6 @@
-# Time Out (tim mei)
+# space invaders
 
-## space invaders
+## time out (tim mei)
 
 **Objective**
 For my project, I wanted to recreate space invaders. The main objective of Space Invaders is to destroy as many waves of aliens as possible to achieve the highest possible score. Alternatively, if the player loses all their lives or lets the aliens invade the planet, the game ends. For my project, I want to be able to allow the player to play at least one round. The goal is to be able to replicate cannon behavior as well as much of the alien behavior as possible. 
