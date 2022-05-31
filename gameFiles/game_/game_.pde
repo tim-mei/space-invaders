@@ -24,6 +24,11 @@ void draw() {
   player.position();
   line(0, 800, width, 800);
   invaders.mobilize();
+  for (int x=0; x<bullets.size(); x++) {
+    bullet shot = (bullet) bullets.get(x);
+    shot.display();
+    shot.move();
+  }
 }
 
 
@@ -45,6 +50,9 @@ void keyPressed() {
   }
   if (keyCode == RIGHT) {
     pressRight = true;
+  }
+  if (key == ' ') {
+    player.shoot();
   }
 }
 

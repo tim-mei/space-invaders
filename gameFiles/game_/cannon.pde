@@ -35,6 +35,6 @@ public class cannon {
 
 
   void shoot() {
-    //return new bullet(this.x, this.y);
+    bullets.add(new bullet(this.x + howWide/2, y - 10, -1)); 
   }
 }

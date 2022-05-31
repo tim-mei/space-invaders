@@ -1,21 +1,24 @@
 public class bullet {
   float x, y;
+  float direction;
 
   public bullet(){
   }
   
-  public bullet(float xd, float yd){
+  public bullet(float xd, float yd, int posNeg){
     x = xd;
     y = yd;
+    direction = posNeg;
   }
   
   void display(){
-    rect(this.x, this.y, 2, 10);
+    fill(255); 
+    rect(this.x, this.y, 5, 10);
   }
   
   void move() {
     //remove from the bullets arraylist when above the height or below 0
-    y += 20;
+    y += direction * 5;
     if(y > height || y < 0){
       bullets.remove(this);
     }
