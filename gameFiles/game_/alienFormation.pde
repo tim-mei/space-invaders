@@ -22,6 +22,7 @@ public class alienFormation {
       alien invader = (alien) numbers.get(x);
       invader.invade();
       invader.display();
+      invader.shoot();
     }
   }
   

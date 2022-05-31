@@ -43,27 +43,13 @@ public class alien {
   void die() {
     alive = false;
   }
-}
-
-public class shooterAlien extends alien {
-  int typeClass; 
-
-  public shooterAlien(float x, float y, int points, int type) {
-    xPos = x;
-    yPos = y; 
-    pointsWorth = points;
-    typeClass = type;
-  }
 
   void shoot() {
     float rGen = (float)Math.random();
-    if (rGen > 0.8) {
-      //shoots a bullet if the alien is also the first in the column
-      //new program to check if the alien is first?
+    if (rGen > 0.999) {
+      bullets.add(new bullet(this.xPos+howWide/2, yPos+35,1));
     }
   }
+ 
 
-  void invade() {
-    super.invade();
-  }
 }
