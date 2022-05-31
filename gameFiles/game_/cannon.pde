@@ -1,47 +1,47 @@
 public class cannon {
-
   float x, y; 
-  int numOfLives; 
+  boolean alive;
   color c; 
+  int howWide = 120;
+
+  //boolean goLeft = false;
+  //boolean goRight = false;
 
   public cannon() { 
-    x = 800; 
+    x = width/2; 
     y = 750; 
-    numOfLives = 3; 
+    alive = true;
     c = color(#5FA792);
   }
 
+  //scale this down
   void display() {
+    stroke(c);
     fill(c);
-    rect(750, 700, 100, 40);
-    rect(725, 675, 80, 10);
-    rect(775, 630, 20, 20);
-    rect(790, 620, 5, 5);
+    rect(this.x, this.y, howWide, 15);
   }
 
-  void move() {
-    if (key == CODED) { 
-      if (keyCode == LEFT) {
-        if (x - 50 <= 300) {
-          x -= 10;
-        }
-      }
-      if (keyCode == RIGHT) {
-        if (x + 50 <= 1300) { 
-          x += 10;
-        }
+  void position() {
+    if (x < 0) {
+      x = 0;
+    }
+    if (x + howWide > width) {
+      x = width - howWide;
+    }
+  }
+
+  void die(){
+    for(int x=0; x<bullets.size(); x++){
+      bullet curr = (bullet) bullets.get(x);
+      if(dist(curr.x, curr.y, x+howWide/2, y-5) < 60){
+        bullets.remove(curr);
+        this.x = width/2;
+        numOFLives--;
       }
     }
   }
 
   void shoot() {
-    if (keyPressed) {
-      if (key == ' ') {
-        //create a new bullet
-      }
-    }
+    bullets.add(new bullet(this.x + howWide/2, y - 10, -1)); 
   }
-  
-  
-  
 }
