@@ -31,6 +31,7 @@ void draw() {
     shot.display();
     shot.move();
   }
+  player.die();
   textSize(36);
   fill(255);
   text("Score: " + currScore, 50, 50);
