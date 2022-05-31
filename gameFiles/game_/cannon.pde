@@ -1,7 +1,6 @@
 public class cannon {
   float x, y; 
   boolean alive;
-  int numOfLives; 
   color c; 
   int howWide = 120;
 
@@ -12,7 +11,6 @@ public class cannon {
     x = width/2; 
     y = 750; 
     alive = true;
-    numOfLives = 3; 
     c = color(#5FA792);
   }
 
@@ -32,7 +30,16 @@ public class cannon {
     }
   }
 
-
+  void die(){
+    for(int x=0; x<bullets.size(); x++){
+      bullet curr = (bullet) bullets.get(x);
+      if(dist(curr.x, curr.y, x+howWide/2, y-5) < 60){
+        bullets.remove(curr);
+        this.x = width/2;
+        numOFLives--;
+      }
+    }
+  }
 
   void shoot() {
     bullets.add(new bullet(this.x + howWide/2, y - 10, -1)); 

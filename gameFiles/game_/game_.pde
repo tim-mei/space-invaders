@@ -5,15 +5,16 @@ boolean pressRight = false;
 
 cannon player;
 int currScore;
+int numOFLives;
 
 void setup() { 
   size(1600, 900);
   background(0);
-  alien test = new alien(100, 100, 10);
   invaders.assemble();
   stroke(#FFFFFF);
   player = new cannon();
   player.display();
+  numOFLives = 3;
 }
 
 void draw() {
