@@ -30,7 +30,8 @@ void draw() {
     bullet shot = (bullet) bullets.get(x);
     shot.display();
     shot.move();
-  }
+  };
+ 
   player.die();
   textSize(36);
   fill(255);

@@ -47,7 +47,7 @@ public class alien {
   void shoot() {
     float rGen = (float)Math.random();
     if (rGen > 0.999) {
-      bullets.add(new bullet(this.xPos+howWide/2, yPos+35,1));
+      bullets.add(new bullet(this.xPos+howWide/2, yPos+35,1, "alien"));
     }
   }
  
