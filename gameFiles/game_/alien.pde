@@ -41,7 +41,14 @@ public class alien {
   }
 
   void die() {
-    alive = false;
+    for (int x=0; x<bullets.size(); x++) {
+      bullet curr = (bullet) bullets.get(x);
+      if (dist(curr.x, curr.y, xPos+howWide/2, yPos-5) < 40 && 
+        curr.getSource().equals("player") ) {
+        bullets.remove(curr);
+        
+      }
+    }
   }
 
   void shoot() {
