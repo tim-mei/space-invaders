@@ -33,7 +33,7 @@ public class cannon {
   void die() {
     for (int x=0; x<bullets.size(); x++) {
       bullet curr = (bullet) bullets.get(x);
-      if (dist(curr.x, curr.y, x+howWide/2, y-5) < 40 && 
+      if (dist(curr.x, curr.y, x+howWide/2, y+5) < 40 && 
         curr.getSource().equals("alien") ) {
         bullets.remove(curr);
         this.x = width/2;
