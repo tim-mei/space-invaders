@@ -30,10 +30,11 @@ public class cannon {
     }
   }
 
-  void die(){
-    for(int x=0; x<bullets.size(); x++){
+  void die() {
+    for (int x=0; x<bullets.size(); x++) {
       bullet curr = (bullet) bullets.get(x);
-      if(dist(curr.x, curr.y, x+howWide/2, y-5) < 60){
+      if (dist(curr.x, curr.y, x+howWide/2, y-5) < 40 && 
+        curr.getSource().equals("alien") ) {
         bullets.remove(curr);
         this.x = width/2;
         numOFLives--;
@@ -42,6 +43,6 @@ public class cannon {
   }
 
   void shoot() {
-    bullets.add(new bullet(this.x + howWide/2, y - 10, -1, "player")); 
+    bullets.add(new bullet(this.x + howWide/2, y - 10, -1, "player"));
   }
 }

@@ -5,10 +5,10 @@ public static final int jump = 575;
 ArrayList numbers = new ArrayList();
 
 public class alienFormation {
-  
+
   public alienFormation() {
   }
-  
+
   void assemble() {
     for (int y=100; y<=350; y+=50) {
       for (int x=550; x<=1050; x+=50) {
@@ -27,5 +27,4 @@ public class alienFormation {
       invader.shoot();
     }
   }
-  
 }
