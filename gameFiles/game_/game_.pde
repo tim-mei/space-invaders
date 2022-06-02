@@ -31,16 +31,20 @@ void draw() {
     shot.display();
     shot.move();
   };
- 
   player.die();
   textSize(36);
   fill(255);
   text("Score: " + currScore, 50, 50);
   text("Lives: " + numOFLives, 50, 850);
-  
 }
 
-
+void gameOver(){
+  if(numOFLives <= 0){
+    textSize(48);
+    text("GAME OVER", width/2, height/2);
+  }
+}
+  
 
 //movement for the player
 

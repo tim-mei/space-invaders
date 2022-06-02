@@ -25,6 +25,11 @@ public class alienFormation {
       invader.invade();
       invader.display();
       invader.shoot();
+      invader.die();
     }
+  }
+
+  void move() {
+    //so that the aliens move in formation// they dont bounce off the walls
   }
 }
