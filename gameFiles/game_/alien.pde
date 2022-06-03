@@ -46,7 +46,8 @@ public class alien {
       if (dist(curr.x, curr.y, xPos+howWide/2, yPos-5) < 40 && 
         curr.getSource().equals("player") ) {
         bullets.remove(curr);
-        //invaders.remove(indexOf(this));
+        currScore += this.pointsWorth;
+        //die?
       }
     }
   }
