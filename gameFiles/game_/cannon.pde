@@ -2,7 +2,7 @@ public class cannon {
   float x, y; 
   boolean alive;
   color c; 
-  int howWide = 120;
+  int howWide = 60;
 
   //boolean goLeft = false;
   //boolean goRight = false;
@@ -33,7 +33,7 @@ public class cannon {
   void die() {
     for (int x=0; x<bullets.size(); x++) {
       bullet curr = (bullet) bullets.get(x);
-      if (dist(x+howWide/2, y+5, curr.x, curr.y) < 40 && 
+      if (curr.x >= this.x && curr.x <= this.x+howWide && curr.y == this.y && 
         curr.getSource().equals("alien") ) {
         bullets.remove(curr);
         this.x = width/2;

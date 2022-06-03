@@ -71,7 +71,7 @@ void keyPressed() {
   }
   if (key == ' ' && countdown == 0) {
     player.shoot();
-    countdown += 60;
+    countdown += 30;
   }
 }
 
