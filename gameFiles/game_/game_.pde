@@ -3,6 +3,7 @@ ArrayList bullets = new ArrayList();
 boolean pressLeft = false;
 boolean pressRight = false;
 
+int countdown;
 cannon player;
 int currScore;
 int numOFLives;
@@ -10,6 +11,7 @@ int numOFLives;
 void setup() { 
   size(1600, 900);
   background(0);
+  countdown = 0;
   invaders.assemble();
   stroke(#FFFFFF);
   player = new cannon();
@@ -20,6 +22,9 @@ void setup() {
 
 void draw() {
   background(0);
+  if(countdown > 0){
+    countdown --;
+  }
   //all aliens in the list should be able to move here
   player.display();
   move();
@@ -64,8 +69,9 @@ void keyPressed() {
   if (keyCode == RIGHT) {
     pressRight = true;
   }
-  if (key == ' ') {
+  if (key == ' ' && countdown == 0) {
     player.shoot();
+    countdown += 60;
   }
 }
 
