@@ -31,6 +31,7 @@ void draw() {
   player.position();
   line(0, 800, width, 800);
   invaders.mobilize();
+  //invaders.move();
   invaders.clean();
   for (int x=0; x<bullets.size(); x++) {
     bullet shot = (bullet) bullets.get(x);

@@ -34,23 +34,28 @@ public class alienFormation {
       alien invader = (alien) numbers.get(x);
       invader.display();
       invader.shoot();
+      invader.invade();
       invader.die();
     }
   }
-
+  
+  /*
   void move() {
     //so that the aliens move in formation// they dont bounce off the walls
     for (int i=0; i<numbers.size(); i++) {
-      alien invader = (alien) numbers.get(i); 
-      if (front==0) {
-        invader.invadeF();
+      alien invader = (alien) numbers.get(i);  invader.dx;
+      if (front<=0) {
+        
         front++;
         back++;
       }
-      if (back==width) {
+      if (back>=widt) {
         invader.invadeB();
         front--;
         back--;
       }
     }
   }
+  */
+
+}

@@ -28,7 +28,7 @@ public class alien {
     return alive;
   }
 
-  void invadeF() {
+  void invade() {
     //forward direction
     xPos += dx;
     if (xPos <=0) {
@@ -36,9 +36,6 @@ public class alien {
       dx *= -1;
       yPos += 40;
     }
-  }
-  
-  void invadeB() {
     //backward direction
     if (xPos + howWide >= width - 10) {
       xPos = width - (howWide + 10);
