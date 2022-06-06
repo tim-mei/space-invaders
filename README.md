@@ -21,3 +21,13 @@ Use the left and right arrow keys to pilot the cannon. Press 'spacebar' to shoot
 5/27 - experimented with alien movement and cannon movement
 
 5/30 - *(lots of work)* got cannon movement functioning, alien movement functioning, alien shooting functioning, and cannon shooting functioning
+
+5/31 - started the process of player death
+
+6/2  - bullet hitboxes work; properly despawn when hitting an alien or the player
+
+6/3  - tweaked the formula for the hitbox; player properly dies and respawns; put a limiter on the firing rate of the player
+
+6/5  - got alien hitboxes working, the points system, and started working on a new move method for the aliens
+
+
