@@ -1,12 +1,13 @@
 public static final int cols = 11;
 public static final int rows = 5;
-public static final int vert = 275;
-public static final int jump = 575;
 ArrayList numbers = new ArrayList();
 
 public class alienFormation {
+  float front, back;
 
   public alienFormation() {
+    front = 550;
+    back = 1075;
   }
 
   void assemble() {
@@ -31,7 +32,6 @@ public class alienFormation {
   void mobilize() { 
     for (int x=0; x<numbers.size(); x++) {
       alien invader = (alien) numbers.get(x);
-      invader.invade();
       invader.display();
       invader.shoot();
       invader.die();
@@ -40,5 +40,17 @@ public class alienFormation {
 
   void move() {
     //so that the aliens move in formation// they dont bounce off the walls
+    for (int i=0; i<numbers.size(); i++) {
+      alien invader = (alien) numbers.get(i); 
+      if (front==0) {
+        invader.invadeF();
+        front++;
+        back++;
+      }
+      if (back==width) {
+        invader.invadeB();
+        front--;
+        back--;
+      }
+    }
   }
-}
