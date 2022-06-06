@@ -23,6 +23,10 @@ public class alien {
     fill(255);
     rect(this.xPos, this.yPos, 25, 25, 28);
   }
+  
+  public boolean getStatus(){
+    return alive;
+  }
 
   void invade() {
     //forward direction
@@ -45,9 +49,10 @@ public class alien {
       bullet curr = (bullet) bullets.get(x);
       if (dist(curr.x, curr.y, xPos+howWide/2, yPos-5) < 40 && 
         curr.getSource().equals("player") ) {
+          
         bullets.remove(curr);
         currScore += this.pointsWorth;
-        //die?
+        alive = false;
       }
     }
   }

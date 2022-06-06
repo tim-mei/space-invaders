@@ -19,6 +19,15 @@ public class alienFormation {
     }
   }
 
+  void clean() {
+    for (int i=0; i<numbers.size(); i++) {
+      alien curr = (alien) numbers.get(i);
+      if (curr.getStatus() == false) {
+        numbers.remove(curr);
+      }
+    }
+  }
+
   void mobilize() { 
     for (int x=0; x<numbers.size(); x++) {
       alien invader = (alien) numbers.get(x);
