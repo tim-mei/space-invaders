@@ -31,6 +31,8 @@ public class alien {
   void invadeF() {
     //forward direction
     xPos += dx;
+    invaders.front ++;
+    invaders.back++;
     if (xPos <=0) {
       xPos = 0;
       dx *= -1;
@@ -40,6 +42,8 @@ public class alien {
   
   void invadeB(){
     //backward direction
+    invaders.front--;
+    invaders.back--;
     if (xPos + howWide >= width - 10) {
       xPos = width - (howWide + 10);
       dx *= -1 * speedMod;

@@ -52,6 +52,7 @@ public class alienFormation {
     }
   }
   
+  /*
   public float getFront(){
     return front;
   }
@@ -59,4 +60,5 @@ public class alienFormation {
   public float getBack(){
     return back;
   }
+  */
 }
