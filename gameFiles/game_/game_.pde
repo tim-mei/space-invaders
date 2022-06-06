@@ -33,6 +33,7 @@ void draw() {
   invaders.mobilize();
   //invaders.move();
   invaders.clean();
+  invaders.shift();
   for (int x=0; x<bullets.size(); x++) {
     bullet shot = (bullet) bullets.get(x);
     shot.display();

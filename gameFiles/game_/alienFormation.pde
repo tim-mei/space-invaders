@@ -34,18 +34,22 @@ public class alienFormation {
       alien invader = (alien) numbers.get(x);
       invader.display();
       invader.shoot();
-      invader.invade();
+      invader.invadeF();
+      invader.invadeB();
       invader.die();
     }
   }
-  
+
   void shift() {
+    //every time the aliens move the front and back values need to shift
+    
     //so that the aliens move in formation// they dont bounce off the walls
-    if(front == 0 || back == width){
-    for (int i=0; i<numbers.size(); i++) {
-      alien invader = (alien) numbers.get(i); 
-      invader.dx *= -1;
+    if (front == 0 || back == width) {
+      for (int i=0; i<numbers.size(); i++) {
+        alien invader = (alien) numbers.get(i); 
+        invader.dx *= -1;
+      }
     }
   }
-
+  
 }
