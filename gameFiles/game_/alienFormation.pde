@@ -39,23 +39,13 @@ public class alienFormation {
     }
   }
   
-  /*
-  void move() {
+  void shift() {
     //so that the aliens move in formation// they dont bounce off the walls
+    if(front == 0 || back == width){
     for (int i=0; i<numbers.size(); i++) {
-      alien invader = (alien) numbers.get(i);  invader.dx;
-      if (front<=0) {
-        
-        front++;
-        back++;
-      }
-      if (back>=widt) {
-        invader.invadeB();
-        front--;
-        back--;
-      }
+      alien invader = (alien) numbers.get(i); 
+      invader.dx *= -1;
     }
   }
-  */
 
 }
