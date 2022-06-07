@@ -44,6 +44,8 @@ void draw() {
   fill(255);
   text("Score: " + currScore, 50, 50);
   text("Lives: " + numOFLives, 50, 850);
+  text("front: " + invaders.front, 1350, 85);
+  text("front: " + invaders.back, 1350, 185);
   gameOver();
 }
 

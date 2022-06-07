@@ -52,13 +52,5 @@ public class alienFormation {
     }
   }
   
-  /*
-  public float getFront(){
-    return front;
-  }
   
-  public float getBack(){
-    return back;
-  }
-  */
 }

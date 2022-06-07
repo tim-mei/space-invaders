@@ -31,12 +31,13 @@ public class alien {
   void invadeF() {
     //forward direction
     xPos += dx;
-    invaders.front ++;
-    invaders.back++;
     if (xPos <=0) {
-      xPos = 0;
-      dx *= -1;
-      yPos += 40;
+      //for(int i=0; i<invaders.size(); i++){
+        
+        xPos += 2;
+        dx *= -1;
+        yPos += 40;
+      //}
     }
   }
   
