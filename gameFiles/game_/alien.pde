@@ -23,28 +23,31 @@ public class alien {
     fill(255);
     rect(this.xPos, this.yPos, 25, 25, 28);
   }
-  
-  public boolean getStatus(){
+
+  public boolean getStatus() {
     return alive;
   }
 
   void invadeF() {
     //forward direction
+    if (dx > 0) {
+      invaders.front++;
+      invaders.back++;
+    }
     xPos += dx;
     if (xPos <=0) {
-      //for(int i=0; i<invaders.size(); i++){
-        
-        xPos += 2;
-        dx *= -1;
-        yPos += 40;
-      //}
+      xPos += 2;
+      dx *= -1;
+      yPos += 40;
     }
   }
-  
-  void invadeB(){
+
+  void invadeB() {
     //backward direction
-    invaders.front--;
-    invaders.back--;
+    if (dx < 0) {
+      invaders.front--;
+      invaders.back--;
+    }
     if (xPos + howWide >= width - 10) {
       xPos = width - (howWide + 10);
       dx *= -1 * speedMod;
@@ -57,7 +60,7 @@ public class alien {
       bullet curr = (bullet) bullets.get(x);
       if (dist(curr.x, curr.y, xPos+howWide/2, yPos-5) < 40 && 
         curr.getSource().equals("player") ) {
-          
+
         bullets.remove(curr);
         currScore += this.pointsWorth;
         alive = false;
