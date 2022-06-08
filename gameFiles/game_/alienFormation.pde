@@ -6,8 +6,8 @@ public class alienFormation {
   float front, back;
 
   public alienFormation() {
-    front = 550;
-    back = 1075;
+    front = 0;
+    back = 0;
   }
 
   void assemble() {
@@ -18,6 +18,10 @@ public class alienFormation {
         numbers.add(new alien(xPos, yPos, 10));
       }
     }
+    alien first = (alien) numbers.get(0);
+    front = first.xPos;
+    alien last = (alien) numbers.get(10);
+    back = last.xPos+25;
   }
 
   void clean() {
@@ -42,16 +46,14 @@ public class alienFormation {
 
   void shift() {
     //every time the aliens move the front and back values need to shift
-    
+
     //so that the aliens move in formation// they dont bounce off the walls
-    if (front <= -10000 || back >= 10000) {
+    if (front <= 0 || back >= width) {
       for (int i=0; i<numbers.size(); i++) {
         alien invader = (alien) numbers.get(i); 
         invader.dx *= -1;
-        invader.yPos += 50;
+        invader.yPos += 40;
       }
     }
   }
-  
-  
 }

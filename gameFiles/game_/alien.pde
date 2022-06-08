@@ -38,7 +38,6 @@ public class alien {
     if (xPos <=0) {
       xPos += 2;
       dx *= -1;
-      yPos += 40;
     }
   }
 
@@ -51,7 +50,6 @@ public class alien {
     if (xPos + howWide >= width - 10) {
       xPos = width - (howWide + 10);
       dx *= -1 * speedMod;
-      yPos += 40;
     }
   }
 
