@@ -48,11 +48,13 @@ public class alienFormation {
     //every time the aliens move the front and back values need to shift
 
     //so that the aliens move in formation// they dont bounce off the walls
-    if (front <= 0 || back >= width) {
-      for (int i=0; i<numbers.size(); i++) {
-        alien invader = (alien) numbers.get(i); 
-        invader.dx *= -1;
-        invader.yPos += 40;
+    for (int i=0; i<numbers.size(); i++) {
+      alien invader = (alien) numbers.get(i); 
+      if(invader.xPos == 0 || invader.yPos + 25 >= width){
+        for(int k=0; k<numbers.size(); k++){
+          invader.dx *= -1;
+          invader.yPos += 40;
+        }
       }
     }
   }
