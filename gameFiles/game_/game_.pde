@@ -2,7 +2,7 @@ alienFormation invaders = new alienFormation();
 ArrayList bullets = new ArrayList();
 boolean pressLeft = false;
 boolean pressRight = false;
-boolean gameOver = false;
+boolean gameOver;
 
 int countdown;
 int currScore;
@@ -12,6 +12,7 @@ cannon player;
 void setup() { 
   size(1600, 900);
   background(0);
+  gameOver = false;
   countdown = 0;
   numOFLives = 3;
   currScore = 0;
@@ -52,6 +53,7 @@ void over() {
   if (numOFLives <= 0) {
     gameOver = true;
     background(0);
+    invaders.removeAll();
     textSize(48);
     text("GAME OVER", width/2, height/2);
   }

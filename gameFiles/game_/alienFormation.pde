@@ -59,4 +59,11 @@ public class alienFormation {
     }
   }
   
+  void removeAll(){
+    for (int i=numbers.size()-1; i>-1; i--) {
+      alien invader = (alien) numbers.get(i);
+      numbers.remove(invader);
+    }
+  }
+  
 }
