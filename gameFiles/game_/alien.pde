@@ -29,7 +29,6 @@ public class alien {
   }
 
   void invadeF() {
-    //forward direction
     if (dx > 0) {
       invaders.front++;
       invaders.back++;
@@ -40,6 +39,7 @@ public class alien {
       dx *= -1;
     }
   }
+  
 
   void invadeB() {
     //backward direction
@@ -52,6 +52,7 @@ public class alien {
       dx *= -1 * speedMod;
     }
   }
+ 
 
   void die() {
     for (int x=0; x<bullets.size(); x++) {
