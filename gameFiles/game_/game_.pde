@@ -54,8 +54,15 @@ void over() {
     gameOver = true;
     background(0);
     invaders.removeAll();
+    fill(#0FFAF4);
     textSize(48);
-    text("GAME OVER", width/2, height/2);
+    text("Your Score: " + currScore, width/2-140, height/2 - 200);
+    fill(255);
+    textSize(24);
+    text("Press z to reset", width/2.5 + 100, height/2 + 200);
+    fill(#18E307);
+    textSize(96);
+    text("GAME OVER", width/3, height/2);
   }
 }
 
@@ -85,6 +92,7 @@ void keyPressed() {
   if(key == 'z' && gameOver){
     setup();
   }
+  
   //cheats 
 }
 
