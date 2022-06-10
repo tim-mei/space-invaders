@@ -30,9 +30,6 @@ public class alien {
 
   void invade() {
     xPos += dx;
-    if (xPos <=0) {
-      dx *= -1;
-    }
   }
  
 

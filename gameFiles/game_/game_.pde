@@ -2,6 +2,7 @@ alienFormation invaders = new alienFormation();
 ArrayList bullets = new ArrayList();
 boolean pressLeft = false;
 boolean pressRight = false;
+boolean gameOver = false;
 
 int countdown;
 int currScore;
@@ -31,7 +32,6 @@ void draw() {
   player.position();
   line(0, 800, width, 800);
   invaders.mobilize();
-  //invaders.move();
   invaders.clean();
   invaders.againstWall();
   invaders.shift();
@@ -45,11 +45,13 @@ void draw() {
   fill(255);
   text("Score: " + currScore, 50, 50);
   text("Lives: " + numOFLives, 50, 850);
-  gameOver();
+  over();
 }
 
-void gameOver() {
+void over() {
   if (numOFLives <= 0) {
+    gameOver = true;
+    background(0);
     textSize(48);
     text("GAME OVER", width/2, height/2);
   }
@@ -78,6 +80,10 @@ void keyPressed() {
     player.shoot();
     countdown += 30;
   }
+  if(key == 'z' && gameOver){
+    setup();
+  }
+  //cheats 
 }
 
 void keyReleased() {
