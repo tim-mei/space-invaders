@@ -29,30 +29,21 @@ public class alien {
   }
 
   void invadeF() {
-    if (dx > 0) {
-      invaders.front++;
-      invaders.back++;
-    }
     xPos += dx;
     if (xPos <=0) {
-      xPos += 2;
+      //xPos += 2;
       dx *= -1;
     }
   }
   
-
+  /*
   void invadeB() {
-    //backward direction
-    if (dx < 0) {
-      invaders.front--;
-      invaders.back--;
-    }
     if (xPos + howWide >= width - 10) {
       xPos = width - (howWide + 10);
       dx *= -1 * speedMod;
     }
   }
- 
+   */
 
   void die() {
     for (int x=0; x<bullets.size(); x++) {

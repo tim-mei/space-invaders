@@ -3,11 +3,10 @@ public static final int rows = 5;
 ArrayList numbers = new ArrayList();
 
 public class alienFormation {
-  float front, back;
+  boolean againstWall = false;
 
   public alienFormation() {
-    front = 0;
-    back = 0;
+    
   }
 
   void assemble() {
@@ -18,10 +17,6 @@ public class alienFormation {
         numbers.add(new alien(xPos, yPos, 10));
       }
     }
-    alien first = (alien) numbers.get(0);
-    front = first.xPos;
-    alien last = (alien) numbers.get(10);
-    back = last.xPos+25;
   }
 
   void clean() {
@@ -39,30 +34,29 @@ public class alienFormation {
       invader.display();
       invader.shoot();
       invader.invadeF();
-      invader.invadeB();
       invader.die();
     }
   }
 
   void shift() {
-    if (front <= -9000 || back >= 9000) {
+    if (this.againstWall) {
       for (int i=0; i<numbers.size(); i++) {
         alien invader = (alien) numbers.get(i); 
-
+        
         invader.dx *= -1;
         invader.yPos += 40;
+        this.againstWall = false;
+      }
+    }
+  }
+
+  void againstWall() {
+    for (int i=0; i<numbers.size(); i++) {
+      alien invader = (alien) numbers.get(i);
+      if (invader.xPos == 75 || invader.xPos+25 == width-75) {
+        this.againstWall = true;
       }
     }
   }
   
-  boolean againstWall (){
-    boolean k = false;
-    for(int i=0; i<numbers.size(); i++){
-      alien invader = (alien) numbers.get(i);
-      if(invader.xPos == 0 || invader.xPos == width){
-        k = true;
-      }
-    }
-    return k;
-    }
 }
