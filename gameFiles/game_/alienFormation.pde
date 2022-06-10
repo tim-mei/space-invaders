@@ -33,7 +33,7 @@ public class alienFormation {
       alien invader = (alien) numbers.get(x);
       invader.display();
       invader.shoot();
-      invader.invadeF();
+      invader.invade();
       invader.die();
     }
   }

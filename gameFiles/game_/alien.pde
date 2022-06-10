@@ -28,22 +28,13 @@ public class alien {
     return alive;
   }
 
-  void invadeF() {
+  void invade() {
     xPos += dx;
     if (xPos <=0) {
-      //xPos += 2;
       dx *= -1;
     }
   }
-  
-  /*
-  void invadeB() {
-    if (xPos + howWide >= width - 10) {
-      xPos = width - (howWide + 10);
-      dx *= -1 * speedMod;
-    }
-  }
-   */
+ 
 
   void die() {
     for (int x=0; x<bullets.size(); x++) {
