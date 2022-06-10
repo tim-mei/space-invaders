@@ -54,4 +54,15 @@ public class alienFormation {
       }
     }
   }
+  
+  boolean againstWall (){
+    boolean k = false;
+    for(int i=0; i<numbers.size(); i++){
+      alien invader = (alien) numbers.get(i);
+      if(invader.xPos == 0 || invader.xPos == width){
+        k = true;
+      }
+    }
+    return k;
+    }
 }
