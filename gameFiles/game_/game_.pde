@@ -33,9 +33,9 @@ void draw() {
   player.position();
   line(0, 800, width, 800);
   invaders.mobilize();
-  invaders.clean();
   invaders.againstWall();
   invaders.shift();
+  invaders.clean();
   for (int x=0; x<bullets.size(); x++) {
     bullet shot = (bullet) bullets.get(x);
     shot.display();
@@ -47,7 +47,7 @@ void draw() {
   text("Score: " + currScore, 50, 50);
   text("Lives: " + numOFLives, 50, 850);
   over();
-  if(invaders.getSize() == 0){
+  if(invaders.getSize() == 1){
     invaders.assemble(); 
   }
 }
@@ -90,7 +90,7 @@ void keyPressed() {
   }
   if (key == ' ' && countdown == 0) {
     player.shoot();
-    countdown += 30;
+    countdown += 25;
   }
   if(key == 'z' && gameOver){
     setup();
