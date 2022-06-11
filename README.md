@@ -7,6 +7,9 @@ For my project, I wanted to recreate space invaders. The main objective of Space
 
 **Instructions**   
 Use the left and right arrow keys to pilot the cannon. Press 'spacebar' to shoot pellets at the aliens.
+q - decreases the number of lives by 1
+w - shifts the alien array down 
+e - removes all the aliens 
 
 [Prototype Document](https://docs.google.com/document/d/11_JpabYqUISPBUm-nMWko9OeEPJgHzp7g-6x7ChPbeA/edit?usp=sharing)
 
@@ -33,6 +36,6 @@ Use the left and right arrow keys to pilot the cannon. Press 'spacebar' to shoot
 6/9  - got alien shifting to work, created a resetting system for the game, created a 'game over' screen, cleaned up 
 some unneccessary code
 
-
+6/10 - created the secondary ending condition (landing on the planet), added cheats to help test the game
 
 
