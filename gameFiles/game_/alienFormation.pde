@@ -4,6 +4,7 @@ ArrayList numbers = new ArrayList();
 
 public class alienFormation {
   boolean againstWall = false;
+  boolean invaded = false;
 
   public alienFormation() {
     
@@ -59,6 +60,15 @@ public class alienFormation {
     }
   }
   
+  void touchdown(){
+    for(int i=0; i<numbers.size(); i++) {
+      alien invader = (alien) numbers.get(i);
+      if (invader.yPos == 800) {
+        invaded = true;
+      }
+    }
+  }
+  
   void removeAll(){
     for (int i=numbers.size()-1; i>-1; i--) {
       alien invader = (alien) numbers.get(i);
@@ -68,6 +78,10 @@ public class alienFormation {
   
   float getSize(){
     return numbers.size();
+  }
+  
+  boolean getStatus(){
+    return invaded;
   }
   
 }
