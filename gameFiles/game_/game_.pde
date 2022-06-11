@@ -47,6 +47,9 @@ void draw() {
   text("Score: " + currScore, 50, 50);
   text("Lives: " + numOFLives, 50, 850);
   over();
+  if(invaders.getSize() == 0){
+    invaders.assemble(); 
+  }
 }
 
 void over() {

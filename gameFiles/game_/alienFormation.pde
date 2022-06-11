@@ -66,4 +66,8 @@ public class alienFormation {
     }
   }
   
+  float getSize(){
+    return numbers.size();
+  }
+  
 }
