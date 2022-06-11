@@ -48,7 +48,7 @@ void draw() {
   text("Score: " + currScore, 50, 50);
   text("Lives: " + numOFLives, 50, 850);
   over();
-  if(invaders.getSize() == 1){
+  if(invaders.getSize() <= 1){
     invaders.assemble(); 
   }
 }
@@ -103,6 +103,9 @@ void keyPressed() {
   }
   if(key == 'w'){
     invaders.dropDown();
+  }
+  if(key == 'e'){
+    invaders.removeAll();
   }
 }
 
