@@ -30,4 +30,9 @@ Use the left and right arrow keys to pilot the cannon. Press 'spacebar' to shoot
 
 6/5  - got alien hitboxes working, the points system, and started working on a new move method for the aliens
 
+6/9  - got alien shifting to work, created a resetting system for the game, created a 'game over' screen, cleaned up 
+some unneccessary code
+
+
+
 
