@@ -102,7 +102,7 @@ void keyPressed() {
     numOFLives--;
   }
   if(key == 'w'){
-    //
+    invaders.dropDown();
   }
 }
 

@@ -7,7 +7,6 @@ public class alienFormation {
   boolean invaded = false;
 
   public alienFormation() {
-    
   }
 
   void assemble() {
@@ -43,7 +42,7 @@ public class alienFormation {
     if (this.againstWall) {
       for (int i=0; i<numbers.size(); i++) {
         alien invader = (alien) numbers.get(i); 
-        
+
         invader.dx *= -1;
         invader.yPos += 40;
         this.againstWall = false;
@@ -59,31 +58,36 @@ public class alienFormation {
       }
     }
   }
-  
-  void touchdown(){
-    for(int i=0; i<numbers.size(); i++) {
+
+  void touchdown() {
+    for (int i=0; i<numbers.size(); i++) {
       alien invader = (alien) numbers.get(i);
       if (invader.yPos >= 775) {
         invaded = true;
       }
     }
   }
-  
-  void removeAll(){
+
+  void removeAll() {
     for (int i=numbers.size()-1; i>-1; i--) {
       alien invader = (alien) numbers.get(i);
       numbers.remove(invader);
     }
   }
-  
-  float getSize(){
+
+  float getSize() {
     return numbers.size();
   }
-  
-  boolean getStatus(){
+
+  boolean getStatus() {
     return invaded;
   }
-  
-  
+
+  void dropDown() {
+    for (int i=numbers.size()-1; i>-1; i--) {
+      alien invader = (alien) numbers.get(i);
+      invader.yPos += 100;
+    }
+  }
   
 }
