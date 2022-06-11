@@ -20,7 +20,7 @@ public class alien {
   }
 
   void display() {
-    fill(255);
+    fill(#0CF20A);
     rect(this.xPos, this.yPos, 25, 25, 28);
   }
 
