@@ -98,6 +98,12 @@ void keyPressed() {
   }
   
   //cheats 
+  if(key == 'q'){
+    numOFLives--;
+  }
+  if(key == 'w'){
+    //
+  }
 }
 
 void keyReleased() {
