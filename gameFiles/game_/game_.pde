@@ -35,6 +35,7 @@ void draw() {
   invaders.mobilize();
   invaders.againstWall();
   invaders.shift();
+  invaders.touchdown();
   invaders.clean();
   for (int x=0; x<bullets.size(); x++) {
     bullet shot = (bullet) bullets.get(x);
@@ -53,7 +54,7 @@ void draw() {
 }
 
 void over() {
-  if (numOFLives <= 0) {
+  if (numOFLives <= 0 || invaders.getStatus()) {
     gameOver = true;
     background(0);
     invaders.removeAll();

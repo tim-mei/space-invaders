@@ -63,7 +63,7 @@ public class alienFormation {
   void touchdown(){
     for(int i=0; i<numbers.size(); i++) {
       alien invader = (alien) numbers.get(i);
-      if (invader.yPos == 800) {
+      if (invader.yPos >= 775) {
         invaded = true;
       }
     }
