@@ -90,4 +90,12 @@ public class alienFormation {
     }
   }
   
+  void speedUp() {
+    for (int i=numbers.size()-1; i>-1; i--) {
+      alien invader = (alien) numbers.get(i);
+      invader.dx *= speedMod;
+    }
+  }
+  
+  
 }
