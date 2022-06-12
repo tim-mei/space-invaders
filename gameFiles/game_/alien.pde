@@ -41,6 +41,7 @@ public class alien {
 
         bullets.remove(curr);
         currScore += this.pointsWorth;
+        subCounter += this.pointsWorth;
         alive = false;
       }
     }

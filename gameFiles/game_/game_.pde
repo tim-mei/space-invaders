@@ -5,6 +5,7 @@ boolean pressRight = false;
 boolean gameOver;
 
 int countdown;
+int subCounter;
 int currScore;
 int numOFLives;
 cannon player;
@@ -14,6 +15,7 @@ void setup() {
   background(0);
   gameOver = false;
   countdown = 0;
+  subCounter = 0;
   numOFLives = 3;
   currScore = 0;
 
@@ -41,6 +43,10 @@ void draw() {
     bullet shot = (bullet) bullets.get(x);
     shot.display();
     shot.move();
+  }
+  if(subCounter >= 500){
+    subCounter = 0;
+    invaders.speedUp();
   }
   player.die();
   textSize(36);
