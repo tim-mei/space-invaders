@@ -38,7 +38,7 @@ some unneccessary code
 
 6/10 - created the secondary ending condition (landing on the planet), added cheats to help test the game
 
-6/11 - update UML diagram and github image 
+6/11 - update UML diagram and github image; updated the prototype document 
 
 
 
