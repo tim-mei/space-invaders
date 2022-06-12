@@ -113,6 +113,10 @@ void keyPressed() {
   if(key == 'e'){
     invaders.removeAll();
   }
+  if(key == 'r'){
+    subCounter += 250;
+    currScore += 250;
+  }
 }
 
 void keyReleased() {

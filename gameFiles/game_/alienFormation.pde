@@ -53,7 +53,7 @@ public class alienFormation {
   void againstWall() {
     for (int i=0; i<numbers.size(); i++) {
       alien invader = (alien) numbers.get(i);
-      if (invader.xPos == 75 || invader.xPos+25 == width-75) {
+      if (invader.xPos <= 75 || invader.xPos+25 >= width-75) {
         this.againstWall = true;
       }
     }
